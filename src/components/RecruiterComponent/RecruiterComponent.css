@@ -1,0 +1,110 @@
+.RecruiterComponent {
+    overflow-x: scroll;
+    height: 100%;
+    width: 100%;
+
+    padding-top: 30px;
+}
+
+.rc-headings {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 10px;
+}
+
+.rc-headings h5 {
+    width: 100px;
+    margin-right: 20px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rc-headings h5:first-child {
+    width: 50px;
+}
+
+.rc-headings h5:nth-child(2) {
+    width: 300px;
+}
+
+.rc-headings h5:nth-child(3) {
+    width: 300px;
+}
+
+.rc-headings h5:nth-child(4) {
+    width: 300px;
+}
+
+.rc-headings h5:nth-child(5) {
+    width: 300px;
+}
+
+.rc-headings h5:nth-child(23) {
+    width: 400px;
+}
+
+.rc-body-items {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+.rc-body-items input {
+    width: 100px;
+    margin-right: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+
+    padding-left: 10px;
+}
+
+.rc-body-items input:first-child {
+    width: 50px;
+}
+
+.rc-body-items input:nth-child(2) {
+    width: 300px;
+}
+
+.rc-body-items input:nth-child(3) {
+    width: 300px;
+}
+
+.rc-body-items input:nth-child(4) {
+    width: 300px;
+}
+
+.rc-body-items input:nth-child(5) {
+    width: 300px;
+}
+
+.rc-body-items input:nth-child(23) {
+    width: 400px;
+}
+
+.rc-body-items button {
+    margin-right: 20px;
+}
+
+.non-editable {
+    pointer-events: none;
+}
+
+.editable {
+    pointer-events: all;
+}
