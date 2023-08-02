@@ -1,4 +1,4 @@
-const APIUrl = "http://127.0.0.1:5000/";
+const APIUrl = "https://tce-survey-backend.onrender.com/";
 
 const courseExitComponentAPIUrl = {
     "get": APIUrl+"courseExitSurvey/getCourseExitSurvey",
