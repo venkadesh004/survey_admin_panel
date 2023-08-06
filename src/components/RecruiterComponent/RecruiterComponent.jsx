@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import "./RecruiterComponent.css";
 
 import axios from 'axios';
-import { recruiterComponentAPIUrl } from '../../API/API';
+import { recruiterComponentAPIUrl } from '../../config/API';
 
 export default class RecruiterComponent extends Component {
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import "./CourseExitComponent.css";
 
 import axios from 'axios';
-import { courseExitComponentAPIUrl } from '../../API/API';
+import { courseExitComponentAPIUrl } from '../../config/API';
 
 export default class CourseExitComponent extends Component {
 

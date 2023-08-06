@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import "./ParentsComponent.css";
 
 import axios from 'axios';
-import { parentsComponentAPIUrl } from '../../API/API';
+import { parentsComponentAPIUrl } from '../../config/API';
 
 export default class ParentsComponent extends Component {
 

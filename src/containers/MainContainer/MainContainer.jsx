@@ -8,7 +8,10 @@ export default class MainContainer extends Component {
         super(props);
 
         this.state = {
-            currentIndex: 0
+            currentIndex: 0,
+            sidebar_class_state: 'sidebar-inactive',
+            sidebar_component_class_state: 'sidebar-components-inactive',
+            sidebar_img: 'sidebar-img-bars'
         };
     }
   
@@ -21,8 +24,27 @@ export default class MainContainer extends Component {
         ];
 
         const myList = sidebarNav.map((value, index) => {
-            return <button onClick={() => this.setState({currentIndex: index})}>{value}</button>
+            return <button onClick={() => {
+                this.setState({currentIndex: index});
+                toggleSideBar();
+            }}>{value}</button>
         });
+
+        const toggleSideBar = () => {
+            if (this.state.sidebar_class_state === 'sidebar-inactive') {
+                this.setState({
+                    sidebar_class_state: 'sidebar-active',
+                    sidebar_component_class_state: 'sidebar-components-active',
+                    sidebar_img: 'sidebar-img-cross'
+                });
+            } else {
+                this.setState({
+                    sidebar_class_state: 'sidebar-inactive',
+                    sidebar_component_class_state: 'sidebar-components-inactive',
+                    sidebar_img: 'sidebar-img-bars'
+                });
+            }
+        }
 
         const bodyComponent = () => {
             console.log(this.state.currentIndex);
@@ -39,14 +61,17 @@ export default class MainContainer extends Component {
 
         return (
         <div className='MainContainer'>
-            <div className="Sidebar">
-                <h1>Admin Panel</h1>
-                <div className="Sidebar-components">
+            <div className={`Sidebar ${this.state.sidebar_class_state}`}>
+                <div className="toggle-button">
+                    <h1>Admin Panel</h1>
+                    <button className='sidebar-button' onClick={toggleSideBar}><div className={`${this.state.sidebar_img}`}></div></button>                
+                </div>
+                <div className={`Sidebar-components ${this.state.sidebar_component_class_state}`}>
                     {
                         myList
                     }
                 </div>
-            </div>
+            </div> 
             <div className="MainBody">
                 {bodyComponent()}
             </div>
