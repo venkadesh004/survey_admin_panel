@@ -170,6 +170,9 @@ export default class CourseExitComponent extends Component {
                 );
             })
         }
+        <div className="download-button">
+            <a href="https://tce-survey-backend.onrender.com/courseExitSurvey/downloadCourseExitSurvey" target='_blank' rel="noreferrer">Download Data</a>
+        </div>
       </div>
     )
   }

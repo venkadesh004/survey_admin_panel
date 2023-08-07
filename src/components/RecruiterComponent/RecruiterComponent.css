@@ -108,3 +108,7 @@
 .editable {
     pointer-events: all;
 }
+
+.download-button {
+    margin-bottom: 20px;
+}
