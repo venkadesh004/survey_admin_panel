@@ -171,7 +171,13 @@ export default class CourseExitComponent extends Component {
             })
         }
         <div className="download-button">
-            <a href="https://tce-survey-backend.onrender.com/courseExitSurvey/downloadCourseExitSurvey" target='_blank' rel="noreferrer">Download Data</a>
+            <a href={courseExitComponentAPIUrl.download} target='_blank' rel="noreferrer">Download Data</a>
+        </div>
+        <div className="upload-data">
+            <form action={courseExitComponentAPIUrl.upload} method='post' encType='multipart/form-data'>
+                <input type="file" name='csvFile' accept='.csv' />
+                <button type='submit'>Upload</button>
+            </form>
         </div>
       </div>
     )
