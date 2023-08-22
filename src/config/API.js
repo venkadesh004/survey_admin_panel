@@ -7,7 +7,9 @@ const courseExitComponentAPIUrl = {
     "update": APIUrl+"courseExitSurvey/updateCourseExitSurvey",
     "delete": APIUrl+"courseExitSurvey/deleteCourseExitSurvey",
     "download": APIUrl+"courseExitSurvey/downloadCourseExitSurvey",
-    "upload": APIUrl+"courseExitSurvey/uploadData"
+    "upload": APIUrl+"courseExitSurvey/uploadData",
+    "getCourseReport": APIUrl+"courseExitSurvey/getCourseReport",
+    "getCourses": APIUrl+"courseExitSurvey/getCourses"
 };
 
 const parentsComponentAPIUrl = {
