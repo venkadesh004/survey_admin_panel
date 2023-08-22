@@ -120,10 +120,10 @@ export default class ReportComponent extends Component {
         {
           data: this.state.data,
           backgroundColor: [
-            "rgba(255, 99, 132, 0.2)",
-            "rgba(255, 159, 64, 0.2)",
-            "rgba(255, 205, 86, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
+            "rgba(255, 99, 132, 0.7)",
+            "rgba(255, 159, 64, 0.7)",
+            "rgba(255, 205, 86, 0.7)",
+            "rgba(75, 192, 192, 0.7)",
           ],
           borderColor: [
             "rgb(255, 99, 132)",
@@ -142,10 +142,10 @@ export default class ReportComponent extends Component {
         {
           fill: true,
           backgroundColor: [
-            "rgba(255, 99, 132, 0.2)",
-            "rgba(255, 159, 64, 0.2)",
-            "rgba(255, 205, 86, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
+            "rgba(255, 99, 132, 0.7)",
+            "rgba(255, 159, 64, 0.7)",
+            "rgba(255, 205, 86, 0.7)",
+            "rgba(75, 192, 192, 0.7)",
           ],
           data: this.state.lectureRatingPie,
           borderColor: [
@@ -191,7 +191,7 @@ export default class ReportComponent extends Component {
                 style={{
                   width: "30px",
                   height: "30px",
-                  backgroundColor: "rgba(255, 99, 132, 0.2)",
+                  backgroundColor: "rgba(255, 99, 132, 0.7)",
                   borderColor: "rgb(255, 99, 132)",
                 }}
               ></div>
@@ -209,7 +209,7 @@ export default class ReportComponent extends Component {
                 style={{
                   width: "30px",
                   height: "30px",
-                  backgroundColor: "rgba(255, 159, 64, 0.2)",
+                  backgroundColor: "rgba(255, 159, 64, 0.7)",
                   borderColor: "rgb(255, 159, 64)",
                 }}
               ></div>
@@ -227,7 +227,7 @@ export default class ReportComponent extends Component {
                 style={{
                   width: "30px",
                   height: "30px",
-                  backgroundColor: "rgba(255, 205, 86, 0.2)",
+                  backgroundColor: "rgba(255, 205, 86, 0.7)",
                   borderColor: "rgb(255, 205, 86)",
                 }}
               ></div>
@@ -245,7 +245,7 @@ export default class ReportComponent extends Component {
                 style={{
                   width: "30px",
                   height: "30px",
-                  backgroundColor: "rgba(75, 192, 192, 0.2)",
+                  backgroundColor: "rgba(75, 192, 192, 0.7)",
                   borderColor: "rgb(75, 192, 192)",
                 }}
               ></div>
