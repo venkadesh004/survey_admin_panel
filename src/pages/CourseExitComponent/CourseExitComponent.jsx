@@ -4,6 +4,8 @@ import "./CourseExitComponent.css";
 import axios from "axios";
 import { courseExitComponentAPIUrl } from "../../config/API";
 
+import Select from "react-dropdown-select";
+
 export default class CourseExitComponent extends Component {
   constructor(props) {
     super(props);
@@ -13,26 +15,24 @@ export default class CourseExitComponent extends Component {
       context: [],
       editable: [],
       loader: true,
+      courseList: []
     };
   }
 
   componentDidMount = async () => {
-    await axios.get(courseExitComponentAPIUrl.get).then((output) => {
-      this.setState({
-        data: output.data,
-      });
+
+    await axios.get(courseExitComponentAPIUrl.getCourses).then((output) => {
       var l = [];
-      var cont = [];
-      for (var i = 0; i < output.data.length; i++) {
-        l.push("non-editable");
-        cont.push("Edit");
-      }
-      this.setState({
-        editable: l,
-        context: cont,
-        loader: false,
+
+      output.data.forEach((element) => {
+        l.push({ label: element, value: element });
       });
-    });
+
+      this.setState({
+        courseList: l,
+        loader: false
+      });
+    }); 
   };
 
   handleUpdate = async (index) => {
@@ -56,7 +56,7 @@ export default class CourseExitComponent extends Component {
         .then((result) => {
           console.log("Result: ", result.data);
           this.setState({
-            data: result.data,
+            data: result.data
           });
           console.log(this.state.data);
         });
@@ -66,7 +66,7 @@ export default class CourseExitComponent extends Component {
 
       this.setState({
         editing: l,
-        context: cont,
+        context: cont
       });
     }
   };
@@ -79,6 +79,28 @@ export default class CourseExitComponent extends Component {
       data: l,
     });
   };
+
+  handleCourses = async (values) => {
+    this.setState({
+      loader: true
+    })
+    await axios.get(courseExitComponentAPIUrl.getCourseFeedback+"/"+values[0].value).then((output) => {
+      this.setState({
+        data: output.data,
+      });
+      var l = [];
+      var cont = [];
+      for (var i = 0; i < output.data.length; i++) {
+        l.push("non-editable");
+        cont.push("Edit");
+      }
+      this.setState({
+        editable: l,
+        context: cont,
+        loader: false,
+      });
+    });
+  }
 
   render() {
     const headings = [
@@ -245,6 +267,11 @@ export default class CourseExitComponent extends Component {
       return (
         <div className="RecruiterComponent">
           <h1>Course Exit Survey</h1>
+          <Select
+            style={{ zIndex: 0, marginBottom: "20px", marginTop: "20px" }}
+            options={this.state.courseList}
+            onChange={(values) => this.handleCourses(values)}
+          />
           <div className="rc-headings">
             {headings.map((value, index) => {
               return <h5>{value}</h5>;

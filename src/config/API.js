@@ -1,5 +1,5 @@
-const APIUrl = "https://tce-survey-backend.onrender.com/";
-// const APIUrl = "http://localhost:5000/"
+// const APIUrl = "https://tce-survey-backend.onrender.com/";
+const APIUrl = "http://localhost:5000/"
 
 const courseExitComponentAPIUrl = {
     "get": APIUrl+"courseExitSurvey/getCourseExitSurvey",
@@ -9,7 +9,8 @@ const courseExitComponentAPIUrl = {
     "download": APIUrl+"courseExitSurvey/downloadCourseExitSurvey",
     "upload": APIUrl+"courseExitSurvey/uploadData",
     "getCourseReport": APIUrl+"courseExitSurvey/getCourseReport",
-    "getCourses": APIUrl+"courseExitSurvey/getCourses"
+    "getCourses": APIUrl+"courseExitSurvey/getCourses",
+    "getCourseFeedback": APIUrl+"courseExitSurvey/getCourseFeedback"
 };
 
 const parentsComponentAPIUrl = {
