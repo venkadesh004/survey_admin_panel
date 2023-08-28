@@ -1,5 +1,5 @@
-// const APIUrl = "https://tce-survey-backend.onrender.com/";
-const APIUrl = "http://localhost:5000/"
+const APIUrl = "https://tce-survey-backend.onrender.com/";
+// const APIUrl = "http://localhost:5000/"
 
 const courseExitComponentAPIUrl = {
     "get": APIUrl+"courseExitSurvey/getCourseExitSurvey",
